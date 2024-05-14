@@ -32,8 +32,6 @@ module tt_um_example (
       count <= 8'b0;
     else
       count <= count + 1;
-
-    // uio_out <= count;
   end
 
   assign uio_out = count;
