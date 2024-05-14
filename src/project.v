@@ -23,7 +23,7 @@ module tt_um_example (
   wire reset;
 
   // Logic to derive reset signal
-  assign reset = ~reset_n;
+  assign reset = ~rst_n;
 
   reg [7:0] count;
 
