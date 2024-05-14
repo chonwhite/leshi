@@ -21,4 +21,17 @@ module tt_um_example (
   assign uio_out = 0;
   assign uio_oe  = 0;
 
+    reg [7:0] count;
+
+  always @(posedge clk or posedge reset) begin
+    if (reset)
+      count <= 8'b0;
+    else
+      count <= count + 1;
+
+    uio_out <= count;
+  end
+
+    
+
 endmodule
