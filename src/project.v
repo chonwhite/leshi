@@ -25,16 +25,13 @@ module tt_um_example (
   // Logic to derive reset signal
   assign reset = ~rst_n;
 
-  reg [7:0] count;
 
-  always @(posedge clk or posedge reset) begin
-    if (reset)
-      count <= 8'b0;
-    else
-      count <= count + 1;
-  end
 
-  assign uio_out = count;
+  CpuStage3 cpu_stage3_inst (
+    .led(uio_out),
+    .clk(clk),
+    .reset(reset)
+  );
 
     
 
