@@ -33,8 +33,10 @@ module tt_um_example (
     else
       count <= count + 1;
 
-    uio_out <= count;
+    // uio_out <= count;
   end
+
+  assign uio_out = count;
 
     
 
